@@ -1,0 +1,146 @@
+/* Custom scrollbar for the results container */
+.results-container::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+
+.results-container::-webkit-scrollbar-track {
+  background: rgba(118, 192, 174, 0.1);
+  border-radius: 4px;
+  margin: 0 1rem;
+}
+
+.results-container::-webkit-scrollbar-thumb {
+  background: rgba(118, 192, 174, 0.4);
+  border-radius: 4px;
+  border: 1px solid rgba(118, 192, 174, 0.2);
+}
+
+.results-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(118, 192, 174, 0.6);
+}
+
+/* For Firefox */
+.results-container {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(118, 192, 174, 0.4) rgba(118, 192, 174, 0.1);
+}
+
+.results-container {
+  width: calc(100% - 1.5rem);
+  max-width: 57rem;
+  max-height: 50rem;
+  margin: 2rem auto;
+  padding: 1rem 1rem 1.5rem 1rem; 
+  overflow-x: auto;
+  background: rgba(92, 181, 160, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* Rest of your existing styles remain unchanged */
+
+/* Table styling */
+.investment-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+/* Header styling */
+.investment-table thead {
+  background: linear-gradient(180deg, #307e6c, #2b996d);
+  position: sticky;
+  top: 0;
+}
+
+.investment-table th {
+  padding: 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #e0f8f0;
+  text-align: right;
+}
+
+.investment-table th:first-child {
+  text-align: left;
+  border-top-left-radius: 8px;
+}
+
+.investment-table th:last-child {
+  border-top-right-radius: 8px;
+}
+
+/* Body styling */
+.investment-table tbody tr {
+  background: rgba(1, 11, 9, 0.05);
+  transition: background-color 0.2s ease;
+}
+
+.investment-table tbody tr:nth-child(even) {
+  background: rgba(118, 192, 174, 0.05);
+}
+
+.investment-table tbody tr:hover {
+  background: rgba(118, 192, 174, 0.1);
+}
+
+.investment-table td {
+  padding: 0.75rem 1rem;
+  font-size: 0.85rem;
+  color: #c2e9e0;
+  text-align: right;
+  border-bottom: 1px solid rgba(118, 192, 174, 0.1);
+}
+
+.investment-table td:first-child {
+  text-align: left;
+  font-weight: 500;
+  color: #83e6c0;
+}
+
+/* Empty state styling */
+.empty-state {
+  text-align: center;
+  padding: 2rem;
+  max-width: 40rem;
+  margin: 2rem auto;
+  background: rgba(48, 126, 108, 0.1);
+  border-radius: 12px;
+}
+
+.empty-icon {
+  width: 3rem;
+  height: 3rem;
+  margin-bottom: 1rem;
+  color: #83e6c0;
+  opacity: 0.7;
+}
+
+.empty-state p {
+  font-family: "Roboto", sans-serif;
+  color: #c2e9e0;
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .results-container {
+    margin: 1rem;
+    padding: 0.5rem;
+  }
+
+  .investment-table th,
+  .investment-table td {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .empty-state {
+    width: calc(100% - 1.5rem); /* Consistent side margins */
+  }
+}
