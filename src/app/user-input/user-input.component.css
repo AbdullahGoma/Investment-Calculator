@@ -42,22 +42,27 @@ input[type="number"] {
   transition: all 0.3s ease;
 }
 
-/* Style the spinner arrows */
 /* Hide spinner arrows by default */
 input[type="number"]::-webkit-inner-spin-button,
 input[type="number"]::-webkit-outer-spin-button {
-  opacity: 0;
+  display: none;
   transition: opacity 0.2s ease;
 }
 
-/* Show spinner arrows only when focused */
+/* Show and style spinner arrows only when focused */
 input[type="number"]:focus::-webkit-inner-spin-button,
 input[type="number"]:focus::-webkit-outer-spin-button {
   opacity: 0.6;
   display: block;
   width: 1.5rem;
   height: 2rem;
+  background: 
+    /* Gradient background */
+    linear-gradient(to bottom, rgba(118, 192, 174, 0.1) 0%, rgba(118, 192, 174, 0.05) 100%),
+    /* Arrow icon */
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2376c0ae' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M18 15l-6-6-6 6'/%3E%3C/svg%3E") center 4px no-repeat;
   background-size: 12px;
+  border-radius: 4px;
   position: relative;
   right: -4px;
 }
@@ -84,7 +89,7 @@ input[type="number"]::placeholder {
   border: none;
   border-radius: 8px;
   background: linear-gradient(to right, #83e6c0, #6bd4b0);
-  color: #1a1f1d;
+  color: #344e43;
   font-size: 1rem;
   font-weight: bold;
   text-transform: uppercase;
